@@ -15,16 +15,19 @@
           <div class="jumbotron">
             <h1><%= title %></h1>
             <p>A microservice where the user can submit a FormData object that includes a file upload and When it submits something, 
-            it will receive the file size in bytes within the JSON response</p>
+            it will receive the file size in bytes.</p>
           </div>          
         </div>
-        <form class="col-xs-12" method="POST" enctype="multipart/form-data" action="/uploads">
+        <form class="col-xs-12" method="POST" enctype="multipart/form-data" action="/">
           <div class="form-group">
             <label for="exampleInputEmail">Check file size</label>
             <input type="file" name="upl" required>
           </div>
           <button type="submit" class="btn btn-primary btn-large">Upload</button>
-        </form>        
+        </form>
+        <div class="col-xs-12">
+           <h2>File Size: <%= fileSize %> </h2>
+        </div>
       </div>
     </div>
 

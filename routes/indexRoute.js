@@ -6,6 +6,6 @@ var multer = require('multer');
 /* GET home page. */
 router.get('/', indexCtrl.serveIndex);
 
-router.post('/uploads', multer({ dest: './uploads/'}).single('upl'), indexCtrl.uploadFile);
+router.post('/', multer({ dest: './uploads/'}).single('upl'), indexCtrl.uploadFile);
 
 module.exports = router;
