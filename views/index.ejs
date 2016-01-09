@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%- title %></title>
+    <meta name="author" content="Ulises Cabrera">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="jumbotron">
+            <h1><%= title %></h1>
+            <p>A microservice where the user can submit a FormData object that includes a file upload and When it submits something, 
+            it will receive the file size in bytes within the JSON response</p>
+          </div>          
+        </div>
+        <form class="col-xs-12" method="POST" enctype="multipart/form-data" action="/uploads">
+          <div class="form-group">
+            <label for="exampleInputEmail">Check file size</label>
+            <input type="file" name="upl" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large">Upload</button>
+        </form>        
+      </div>
+    </div>
+
+  </div>   
+
+  </body>
+</html>
